@@ -3,7 +3,7 @@
 // that can be found in the LICENSE file.
 
 /*
-Package tags 0.1.0
+Package tags 0.1.1
 
 Definition:
 
