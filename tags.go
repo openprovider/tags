@@ -3,17 +3,19 @@
 // that can be found in the LICENSE file.
 
 /*
-Package tags 0.1.1
+Package tags 0.1.2
 
 Definition:
 
-"Tags" - a strings which used for tag any object
-"non-strict Tags" - a strings which match to strings in data ("new" -> "new")
-"strict Tags" - all strict tags have prefix "+" for strict match ("+new")
-    and "-" for strict mismatch ("-old")
+	- "Tags" - a strings which used for tag any object
+	- "non-strict Tags" - a strings which match to strings in data ("new" -> "new")
+	- "strict Tags" - all strict tags have prefix "+" for strict match ("+new")
+	    and "-" for strict mismatch ("-old")
 
-All strict Tags applied with logical operator "AND" between each other
-All non-strict Tags applied with logical operator "OR" between all tags
+Rules:
+
+	- All strict Tags applied with logical operator "AND" between each other
+	- All non-strict Tags applied with logical operator "OR" between all tags
 
 Example:
 
@@ -43,6 +45,7 @@ Example:
 
 		fmt.Println("Is this tee black or green?")
 		query := tags.Tags{"black", "green"}
+
 		if product.Tags.IsTagged(query) {
 			fmt.Println("Yes, the tee is black.")
 		} else {
@@ -51,6 +54,7 @@ Example:
 
 		fmt.Println("Is this tee green with sugar?")
 		query = tags.Tags{"+green", "+sugar"}
+
 		if product.Tags.IsTagged(query) {
 			fmt.Println("Yes, the tee is green with sugar.")
 		} else {
@@ -59,6 +63,7 @@ Example:
 
 		fmt.Println("Is this tee hot?")
 		query = tags.Tags{"-ice"}
+
 		if product.Tags.IsTagged(query) {
 			fmt.Println("Yes, the tee is hot.")
 		} else {
@@ -75,10 +80,10 @@ import (
 	"strings"
 )
 
-// Tags a slice of strings which used for tag any object
+// Tags is a slice of strings which used for tag any object
 type Tags []string
 
-// IsTagged method checks if elements in a data compliant for tags in query
+// IsTagged - this method checks if Tags are matched with tags in query
 func (t Tags) IsTagged(query Tags) bool {
 	if len(query) == 0 {
 		return true
