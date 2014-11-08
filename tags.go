@@ -3,13 +3,13 @@
 // that can be found in the LICENSE file.
 
 /*
-Package tags 0.1.2
+Package tags 0.1.3
 
 Definition:
 
-	- "Tags" - a strings which used for tag any object
-	- "non-strict Tags" - a strings which match to strings in data ("new" -> "new")
-	- "strict Tags" - all strict tags have prefix "+" for strict match ("+new")
+	- Tags - a strings which used for tag any object
+	- Non-strict Tags - a strings which match to strings in data ("new" -> "new")
+	- Strict Tags - all strict tags have prefix "+" for strict match ("+new")
 	    and "-" for strict mismatch ("-old")
 
 Rules:
