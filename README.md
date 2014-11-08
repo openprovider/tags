@@ -8,13 +8,15 @@ A tags package for use with Go (golang) services
 
 ### Definitions
 
-"Tags" - a strings which used for tag any object
-"non-strict Tags" - a strings which match to strings in data ("new" -> "new")
-"strict Tags" - all strict tags have prefix "+" for strict match ("+new")
+- "Tags" - a strings which used for tag any object
+- "non-strict Tags" - a strings which match to strings in data ("new" -> "new")
+- "strict Tags" - all strict tags have prefix "+" for strict match ("+new")
     and "-" for strict mismatch ("-old")
 
-All strict Tags applied with logical operator "AND" between each other
-All non-strict Tags applied with logical operator "OR" between all tags
+### Rules
+
+- All strict Tags applied with logical operator "AND" between each other
+- All non-strict Tags applied with logical operator "OR" between all tags
 
 ### Example
 
@@ -45,6 +47,7 @@ func main() {
 
 	fmt.Println("Is this tee black or green?")
 	query := tags.Tags{"black", "green"}
+
 	if product.Tags.IsTagged(query) {
 		fmt.Println("Yes, the tee is black.")
 	} else {
@@ -53,6 +56,7 @@ func main() {
 
 	fmt.Println("Is this tee green with sugar?")
 	query = tags.Tags{"+green", "+sugar"}
+
 	if product.Tags.IsTagged(query) {
 		fmt.Println("Yes, the tee is green with sugar.")
 	} else {
@@ -61,6 +65,7 @@ func main() {
 
 	fmt.Println("Is this tee hot?")
 	query = tags.Tags{"-ice"}
+
 	if product.Tags.IsTagged(query) {
 		fmt.Println("Yes, the tee is hot.")
 	} else {
