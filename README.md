@@ -9,14 +9,14 @@ A tags package for use with Go (golang) services
 ### Definitions
 
 - Tags - a strings which used for tag any object
-- Non-strict Tags - a strings which match to strings in data ("new" -> "new")
-- Strict Tags - all strict tags have prefix "+" for strict match ("+new")
+- Non-strict query tag - a string which match to string in tag ("new" -> "new")
+- Strict query tag - all strict query tags have prefix "+" for strict match ("+new")
     and "-" for strict mismatch ("-old")
 
 ### Rules
 
-- All strict Tags applied with logical operator "AND" between each other
-- All non-strict Tags applied with logical operator "OR" between all tags
+- All strict query tags applied with logical operator "AND" between each other
+- All non-strict query tags applied with logical operator "OR" between all tags in query
 
 ### Queries
 
