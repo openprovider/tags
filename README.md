@@ -3,8 +3,8 @@ Go Tags
 
 A tags package for use with Go (golang) services
 
-[![Build Status](https://travis-ci.org/takama/tags.png?branch=master)](https://travis-ci.org/takama/tags)
-[![GoDoc](https://godoc.org/github.com/takama/tags?status.svg)](https://godoc.org/github.com/takama/tags)
+[![Build Status](https://travis-ci.org/openprovider/tags.png?branch=master)](https://travis-ci.org/openprovider/tags)
+[![GoDoc](https://godoc.org/github.com/openprovider/tags?status.svg)](https://godoc.org/github.com/openprovider/tags)
 
 ### Definitions
 
@@ -34,7 +34,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/takama/tags"
+	"github.com/openprovider/tags"
 )
 
 // Product is struct with tags
@@ -85,7 +85,7 @@ func main() {
 }
 ```
 
-## Author
+## Authors
 
 [Igor Dolzhikov](https://github.com/takama)
 
@@ -94,10 +94,9 @@ func main() {
 All the contributors are welcome. If you would like to be the contributor please accept some rules.
 - The pull requests will be accepted only in "develop" branch
 - All modifications or additions should be tested
-- Sorry, I'll not accept code with any dependency, only standard library
 
 Thank you for your understanding!
 
 ## License
 
-[MIT Public License](https://github.com/takama/tags/blob/master/LICENSE)
+[MIT Public License](https://github.com/openprovider/tags/blob/master/LICENSE)

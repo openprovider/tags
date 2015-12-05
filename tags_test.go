@@ -1,4 +1,4 @@
-// Copyright 2014 Igor Dolzhikov. All rights reserved.
+// Copyright 2015 Openprovider Authors. All rights reserved.
 // Use of this source code is governed by a license
 // that can be found in the LICENSE file.
 
