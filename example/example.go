@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/takama/tags"
+	"github.com/openprovider/tags"
 )
 
 // Product is struct with tags
